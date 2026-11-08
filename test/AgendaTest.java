@@ -49,10 +49,19 @@ public class AgendaTest {
                         System.out.print("Nome do produto: ");
                         String prodNome = input.nextLine();
 
-                        System.out.print("Preço do produto: ");
-                        double prodPreco = input.nextDouble();
-                        input.nextLine();
+                        boolean valorValido = false;
+                        double prodPreco = 0.0;
 
+                        while (!valorValido){
+                            try{
+                                System.out.print("Preço do produto: ");
+                                prodPreco = input.nextDouble();
+                                valorValido = true;
+                            } catch (java.util.InputMismatchException e) {
+                                System.out.println("ERRO: formato digitado invalido");
+                                input.nextLine();
+                            }
+                        }
                         Produto produto = new Produto(prodNome, prodPreco);
                         pedido.addProdutos(produto);
 
