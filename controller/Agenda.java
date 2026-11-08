@@ -73,6 +73,6 @@ public class Agenda {
                 return cliente;
             }
         }
-        return null;
+        throw new ClienteNaoEncontradoException("Cliente não encontrado");
     }
 }
