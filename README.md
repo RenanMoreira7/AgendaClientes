@@ -36,3 +36,11 @@ Certifique-se de ter o **Java JDK** instalado em sua máquina.
 1. Abra o terminal na pasta raiz do código-fonte (`src`):
    ```bash
    cd src
+   
+## Como Definir as Variáveis de Ambiente
+
+1. Crie um arquivo .env na raiz do código-fonte seguindo o .env.example:
+2. Rode o seguinte comando no terminal antes de iniciar a aplicação:
+   ```bash
+   set -a && source .env && set +a
+   
