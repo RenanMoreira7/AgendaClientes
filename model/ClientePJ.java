@@ -2,11 +2,12 @@ package model;
 
 public class ClientePJ extends Cliente{
     private String CNPJ;
-    private String RazaoSocial;
+    private String razaoSocial;
 
-    public ClientePJ(String nome, String contato, String cnpj) {
+    public ClientePJ(String nome, String contato, String cnpj, String razaoSocial) {
         super(nome, contato);
         this.CNPJ = cnpj;
+        this.razaoSocial = razaoSocial;
     }
 
     public ClientePJ(){
@@ -22,11 +23,11 @@ public class ClientePJ extends Cliente{
     }
 
     public String getRazaoSocial() {
-        return RazaoSocial;
+        return razaoSocial;
     }
 
     public void setRazaoSocial(String razaoSocial) {
-        RazaoSocial = razaoSocial;
+        this.razaoSocial = razaoSocial;
     }
 
     @Override
